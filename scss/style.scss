@@ -1,0 +1,59 @@
+// Підключення шрифтів
+// @import url("https://fonts.googleapis.com/css?family=Inter:regular,500,600,700&display=swap");
+
+// Обнулення стилів
+@import "reset";
+
+// Змінні
+@import "vars";
+
+// Функції
+@import "functions";
+
+// =============================================================================================================
+
+// Плавна прокрутка (якщо потрібно)
+:root {
+   scroll-behavior: smooth;
+}
+
+// =============================================================================================================
+
+.wrapper {
+   min-height: 100%;
+   display: flex;
+   flex-direction: column;
+   overflow: hidden;
+   @supports (overflow: clip) {
+      overflow: clip;
+   }
+   > main {
+      flex: 1 1 auto;
+   }
+}
+
+[class*="__container"] {
+   max-width: toRem(1170);
+   margin: 0 auto;
+   padding: 0 toRem(15);
+}
+
+body {
+   font-family: "Inter", sans-serif;
+   font-weight: 500;
+   color: $mainTextColor;
+   &.menu-open {
+      overflow: hidden;
+      touch-action: none;
+      overscroll-behavior: none;
+   }
+}
+
+// =============================================================================================================
+
+// Компоненти
+@import "common";
+@import "header";
+@import "footer";
+
+// =============================================================================================================

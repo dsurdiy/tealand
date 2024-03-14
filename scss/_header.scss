@@ -1,0 +1,49 @@
+// =============================================================================================================
+
+// =============================================================================================================
+
+// .menu-icon - Бургер меню
+.menu-icon {
+   display: none;
+   @media (max-width: toEm($mobile)) {
+      display: block;
+      flex: 0 0 toRem(30);
+      width: toRem(30);
+      height: toRem(24);
+      position: relative;
+   }
+   span,
+   &::before,
+   &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: toRem(3);
+      background-color: $lightTextColor;
+      transition: all 0.5s;
+   }
+   span {
+      top: 50%;
+      margin-top: toRem(-1);
+      .menu-open & {
+         transform: scale(0);
+      }
+   }
+   &::before {
+      top: 0;
+      .menu-open & {
+         top: 50%;
+         transform: rotate(45deg);
+         margin-top: toRem(-2);
+      }
+   }
+   &::after {
+      bottom: 0;
+      .menu-open & {
+         bottom: 50%;
+         transform: rotate(-45deg);
+         margin-bottom: toRem(-1);
+      }
+   }
+}
