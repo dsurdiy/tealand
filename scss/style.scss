@@ -1,5 +1,6 @@
 // Підключення шрифтів
-// @import url("https://fonts.googleapis.com/css?family=Inter:regular,500,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,regular,500&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Philosopher:700&display=swap");
 
 // Обнулення стилів
 @import "reset";
@@ -13,9 +14,9 @@
 // =============================================================================================================
 
 // Плавна прокрутка (якщо потрібно)
-:root {
-   scroll-behavior: smooth;
-}
+// :root {
+//    scroll-behavior: smooth;
+// }
 
 // =============================================================================================================
 
@@ -33,15 +34,16 @@
 }
 
 [class*="__container"] {
-   max-width: toRem(1170);
+   max-width: toRem(1750);
    margin: 0 auto;
    padding: 0 toRem(15);
 }
 
 body {
-   font-family: "Inter", sans-serif;
-   font-weight: 500;
+   font-family: "Roboto", sans-serif;
+   font-weight: 300;
    color: $mainTextColor;
+   font-size: toRem(20);
    &.menu-open {
       overflow: hidden;
       touch-action: none;

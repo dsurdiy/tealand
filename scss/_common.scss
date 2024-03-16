@@ -1,0 +1,56 @@
+.section-header {
+   &.section-header--text-center {
+      text-align: center;
+   }
+   // .section-header__sub-title
+   &__sub-title {
+      font-weight: 400;
+      text-transform: uppercase;
+      color: $secondaryTitleColor;
+      letter-spacing: toEm(2);
+      &:not(:last-child) {
+         margin-bottom: toRem(27);
+      }
+   }
+   // .section-header__title
+   &__title {
+      font-family: "Philosopher", sans-serif;
+      font-size: toRem(50);
+      font-weight: 700;
+      color: $titleColor;
+      &:not(:last-child) {
+         margin-bottom: toRem(30);
+      }
+   }
+   // .section-header__text
+   &__text {
+      line-height: 150%;
+      &:not(:last-child) {
+         margin-bottom: toRem(50);
+      }
+      p {
+         &:not(:last-child) {
+            margin-bottom: toRem(10);
+         }
+      }
+   }
+   // .section-header__link
+   &__link {
+   }
+}
+
+.button {
+   min-width: toRem(170);
+   padding: toRem(13) toRem(35);
+   font-weight: 400;
+   background-color: $titleColor;
+   color: #ffffff;
+   text-align: center;
+   border-radius: toRem(25);
+   transition: background-color 0.3s;
+   @media (any-hover: hover) {
+      &:hover {
+         background-color: $mainTextColor;
+      }
+   }
+}

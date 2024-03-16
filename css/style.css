@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,regular,500&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Philosopher:700&display=swap");
 *,
 *::before,
 *::after {
@@ -71,10 +73,6 @@ textarea {
           appearance: none;
 }
 
-:root {
-  scroll-behavior: smooth;
-}
-
 .wrapper {
   min-height: 100%;
   display: -webkit-box;
@@ -98,15 +96,16 @@ textarea {
 }
 
 [class*=__container] {
-  max-width: 73.125rem;
+  max-width: 109.375rem;
   margin: 0 auto;
   padding: 0 0.9375rem;
 }
 
 body {
-  font-family: "Inter", sans-serif;
-  font-weight: 500;
-  color: rgba(41, 41, 41, 0.4);
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #333333;
+  font-size: 1.25rem;
 }
 body.menu-open {
   overflow: hidden;
@@ -114,6 +113,53 @@ body.menu-open {
       touch-action: none;
   -ms-scroll-chaining: none;
       overscroll-behavior: none;
+}
+
+.section-header.section-header--text-center {
+  text-align: center;
+}
+.section-header__sub-title {
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #8e6746;
+  letter-spacing: 0.125em;
+}
+.section-header__sub-title:not(:last-child) {
+  margin-bottom: 1.6875rem;
+}
+.section-header__title {
+  font-family: "Philosopher", sans-serif;
+  font-size: 3.125rem;
+  font-weight: 700;
+  color: #7d806a;
+}
+.section-header__title:not(:last-child) {
+  margin-bottom: 1.875rem;
+}
+.section-header__text {
+  line-height: 150%;
+}
+.section-header__text:not(:last-child) {
+  margin-bottom: 3.125rem;
+}
+.section-header__text p:not(:last-child) {
+  margin-bottom: 0.625rem;
+}
+.button {
+  min-width: 10.625rem;
+  padding: 0.8125rem 2.1875rem;
+  font-weight: 400;
+  background-color: #7d806a;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 1.5625rem;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+@media (any-hover: hover) {
+  .button:hover {
+    background-color: #333333;
+  }
 }
 
 .menu-icon {
@@ -136,7 +182,6 @@ body.menu-open {
   left: 0;
   width: 100%;
   height: 0.1875rem;
-  background-color: #ffffff;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
