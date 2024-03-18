@@ -1,15 +1,189 @@
-// =============================================================================================================
+.header {
+   // .header__container
+   &__container {
+      min-height: toRem(185);
+      padding-top: toRem(5);
+      padding-bottom: toRem(5);
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      column-gap: toRem(30);
+      justify-content: center;
+      align-items: center;
+      @media (max-width: toEm($tablet)) {
+         min-height: toRem(120);
+      }
+      @media (max-width: toEm($mobile)) {
+         min-height: auto;
+      }
+      @media (max-width: toEm(600)) {
+         grid-template-columns: auto 1fr;
+         column-gap: toRem(0);
+      }
+   }
+   // .header__menu
+   &__menu {
+   }
+   // .header__logo
+   &__logo {
+      position: relative;
+      z-index: 5;
+      justify-self: center;
+   }
+   // .header__actions
+   &__actions {
+      position: relative;
+      z-index: 5;
+      justify-self: end;
+      @media (max-width: toEm($tablet)) {
+         justify-self: center;
+      }
+      @media (max-width: toEm(600)) {
+         justify-self: end;
+      }
+   }
+}
 
-// =============================================================================================================
+.menu {
+   @media (max-width: toEm(600)) {
+      position: fixed;
+      top: 0;
+      left: 100%;
+      width: 100%;
+      height: 100%;
+      padding: toRem(120) toRem(20) toRem(30);
+      background-color: $mainBgColor;
+      overflow: auto;
+      transition: left 0.3s;
+      .menu-open & {
+         left: 0;
+      }
+   }
+   // .menu__list
+   &__list {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: toRem(35);
+      row-gap: toRem(10);
+      @media (max-width: toEm($pc)) {
+         justify-content: center;
+      }
+      @media (max-width: toEm(600)) {
+         flex-direction: column;
+         gap: toRem(30);
+         text-align: right;
+      }
+   }
+   // .menu__item
+   &__item {
+   }
+   // .menu__link
+   &__link {
+      font-weight: 400;
+      text-decoration: underline;
+      text-decoration-color: transparent;
+      transition: all 0.3s;
+      @media (any-hover: hover) {
+         &:hover {
+            color: $secondaryTitleColor;
+            text-decoration-color: inherit;
+         }
+      }
+      @media (max-width: toEm(600)) {
+         font-size: toRem(32);
+      }
+   }
+}
 
-// .menu-icon - Бургер меню
+.logo {
+   width: toRem(169);
+   height: toRem(123);
+   @media (max-width: toEm($pc)) {
+      width: toRem(150);
+      height: toRem(100);
+   }
+   @media (max-width: toEm($tablet)) {
+      width: toRem(130);
+      height: toRem(85);
+   }
+   @media (max-width: toEm(600)) {
+      width: toRem(100);
+      height: toRem(60);
+   }
+   // .logo__image
+   &__image {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+   }
+}
+
+.actions {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: flex-end;
+   column-gap: toRem(25);
+   @media (max-width: toEm($pc)) {
+      column-gap: toRem(10);
+   }
+   @media (max-width: toEm($tablet)) {
+      justify-content: center;
+   }
+
+   // .actions__cart
+   &__cart {
+      font-weight: 400;
+      display: flex;
+      align-items: center;
+      border-radius: toRem(25);
+      gap: toRem(14);
+      padding: toRem(13) toRem(20);
+      transition: all 0.3s;
+      @media (max-width: toEm($tablet)) {
+         padding: toRem(13) toRem(15);
+      }
+      @media (max-width: toEm(600)) {
+         padding: toRem(5);
+      }
+      svg {
+         flex: 0 0 toRem(18);
+         width: toRem(18);
+         height: toRem(22);
+      }
+      path {
+         transition: fill 0.3s;
+      }
+      @media (any-hover: hover) {
+         &:hover {
+            background-color: $titleColor;
+            color: #ffffff;
+            path {
+               fill: #ffffff;
+            }
+         }
+      }
+      @media (max-width: toEm(600)) {
+         span {
+            display: none;
+         }
+      }
+   }
+   // .actions__button
+   &__button {
+      @media (max-width: toEm(600)) {
+         font-size: toRem(16);
+         padding: toRem(10) toRem(15);
+      }
+   }
+}
+
 .menu-icon {
    display: none;
-   @media (max-width: toEm($mobile)) {
+   @media (max-width: toEm(600)) {
       display: block;
       flex: 0 0 toRem(30);
       width: toRem(30);
-      height: toRem(24);
+      height: toRem(20);
       position: relative;
    }
    span,
@@ -19,8 +193,8 @@
       position: absolute;
       left: 0;
       width: 100%;
-      height: toRem(3);
-      // background-color: $lightTextColor;
+      height: toRem(2);
+      background-color: $titleColor;
       transition: all 0.5s;
    }
    span {
@@ -35,7 +209,7 @@
       .menu-open & {
          top: 50%;
          transform: rotate(45deg);
-         margin-top: toRem(-2);
+         margin-top: toRem(-1);
       }
    }
    &::after {
