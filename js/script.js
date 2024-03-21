@@ -15,3 +15,20 @@ function documentActions(e) {
       }
    }
 }
+
+// Sliders
+const heroSlider = document.querySelector(".hero-swiper");
+if (heroSlider) {
+   new Swiper('.hero-swiper', {
+      direction: "vertical",
+      loop: true,
+      enabled: true,
+      navigation: {
+         nextEl: '.hero-swiper__arrow--next',
+         prevEl: '.hero-swiper__arrow--prev',
+      },
+      scrollbar: {
+         el: '.hero-swiper__scrollbar',
+      },
+   });
+}

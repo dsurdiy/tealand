@@ -18,8 +18,12 @@
       font-size: toRem(50);
       font-weight: 700;
       color: $titleColor;
+      text-transform: capitalize;
       &:not(:last-child) {
          margin-bottom: toRem(30);
+      }
+      .hero-swiper & {
+         font-size: toRem(80);
       }
    }
    // .section-header__text
@@ -27,6 +31,9 @@
       line-height: 150%;
       &:not(:last-child) {
          margin-bottom: toRem(50);
+      }
+      &--narrow {
+         max-width: toRem(660);
       }
       p {
          &:not(:last-child) {
