@@ -44,6 +44,7 @@ body {
    font-weight: 300;
    color: $mainTextColor;
    font-size: toRem(20);
+   background-color: $mainBgColor;
    &.menu-open {
       overflow: hidden;
       touch-action: none;
@@ -63,6 +64,10 @@ body {
 .page {
    // .page__hero-swiper
    &__hero-swiper {
+   }
+   // .page__advantages
+   &__advantages {
+      padding-top: toRem(95);
    }
 }
 
@@ -147,5 +152,66 @@ body {
       width: 100%;
       height: 100%;
       object-fit: cover;
+   }
+}
+
+// =============================================================================================================
+
+.advantages {
+   // .advantages__container
+   &__container {
+      position: relative;
+      max-width: toRem(1380);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+      column-gap: toRem(70);
+      &::before {
+         content: "";
+         position: absolute;
+         bottom: toRem(-100);
+         left: toRem(-100);
+         width: toRem(522);
+         height: toRem(481);
+         background: url("../img/decor/dots.png") 0 0 / contain no-repeat;
+      }
+   }
+   // .advantages__image
+   &__image {
+      position: relative;
+      flex: 0 1 toRem(451);
+      aspect-ratio: 451 / 465;
+      &::before,
+      &::after {
+         content: "";
+         position: absolute;
+      }
+      &::before {
+         width: toRem(413);
+         height: toRem(413);
+         background: url("../img/decor/tealeaf.svg") toRem(25) toRem(-35) / contain no-repeat;
+         z-index: -1;
+         left: toRem(-180);
+         top: 0;
+      }
+      &::after {
+         width: toRem(319);
+         height: toRem(130);
+         background: url("../img/decor/tealeaf-2.svg") 0 0 / contain no-repeat;
+         z-index: -1;
+         left: toRem(-150);
+         bottom: toRem(70);
+      }
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         border-radius: 55% 45% 40% 60% / 56% 56% 44% 44%;
+      }
+   }
+   // .advantages__content
+   &__content {
+      flex: 0 1 50%;
    }
 }

@@ -20,7 +20,7 @@
       color: $titleColor;
       text-transform: capitalize;
       &:not(:last-child) {
-         margin-bottom: toRem(30);
+         margin-bottom: toRem(36);
       }
       .hero-swiper & {
          font-size: toRem(80);
