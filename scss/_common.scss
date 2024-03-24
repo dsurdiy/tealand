@@ -41,6 +41,9 @@
          }
          .why & {
             margin-bottom: toRem(30);
+            @media (max-width: toEm($mobile)) {
+               margin-bottom: toRem(15);
+            }
          }
       }
       .hero-swiper & {

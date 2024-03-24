@@ -171,6 +171,11 @@ body.menu-open {
 .why .section-header__title:not(:last-child) {
   margin-bottom: 1.875rem;
 }
+@media (max-width: 47.99875em) {
+  .why .section-header__title:not(:last-child) {
+    margin-bottom: 0.9375rem;
+  }
+}
 .hero-swiper .section-header__title {
   font-size: 5rem;
 }
@@ -910,12 +915,29 @@ body.menu-open {
 .why__header:not(:last-child) {
   margin-bottom: 3.4375rem;
 }
+@media (max-width: 47.99875em) {
+  .why__header:not(:last-child) {
+    margin-bottom: 2.1875rem;
+  }
+}
 .why__items {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0.9375rem;
+  -webkit-column-gap: 0.9375rem;
+     -moz-column-gap: 0.9375rem;
+          column-gap: 0.9375rem;
+  row-gap: 3.125rem;
   justify-items: center;
   text-align: center;
+}
+@media (max-width: 29.99875em) {
+  .why__items {
+    grid-template-columns: repeat(2, 1fr);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    row-gap: 1.25rem;
+  }
 }
 .why__image {
   width: 7rem;
@@ -923,8 +945,24 @@ body.menu-open {
   -o-object-fit: contain;
      object-fit: contain;
 }
+@media (max-width: 47.99875em) {
+  .why__image {
+    width: 5.625rem;
+    height: 5.625rem;
+  }
+}
 .why__image:not(:last-child) {
   margin-bottom: 3.125rem;
+}
+@media (max-width: 61.99875em) {
+  .why__image:not(:last-child) {
+    margin-bottom: 1.875rem;
+  }
+}
+@media (max-width: 29.99875em) {
+  .why__image:not(:last-child) {
+    margin-bottom: 0.9375rem;
+  }
 }
 .why__title-item {
   font-family: "Philosopher", sans-serif;
@@ -932,4 +970,14 @@ body.menu-open {
   font-weight: 700;
   color: #7d806a;
   text-transform: capitalize;
+}
+@media (max-width: 47.99875em) {
+  .why__title-item {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 23.4375em) {
+  .why__title-item {
+    font-size: 1.25rem;
+  }
 }
