@@ -64,10 +64,17 @@ body {
 .page {
    // .page__hero-swiper
    &__hero-swiper {
+      margin-bottom: toRem(50);
    }
    // .page__advantages
    &__advantages {
-      padding-top: toRem(95);
+      padding-top: toRem(50);
+      padding-bottom: toRem(50);
+   }
+   // .page__why
+   &__why {
+      padding-top: toRem(50);
+      padding-bottom: toRem(50);
    }
 }
 
@@ -94,6 +101,16 @@ body {
       align-items: center;
       justify-content: center;
       transition: background-color 0.3s;
+      @media (max-width: toEm($pc)) {
+         right: toRem(50);
+      }
+      @media (max-width: toEm($tablet)) {
+         right: toRem(20);
+      }
+      @media (max-width: toEm($mobileSmall)) {
+         width: toRem(35);
+         height: toRem(35);
+      }
       @media (any-hover: hover) {
          &:hover {
             background-color: $titleColor;
@@ -107,10 +124,19 @@ body {
       &--prev {
          top: 25%;
          background: url("../img/icons/btn-prev.svg") center no-repeat;
+         @media (max-width: toEm(600)) {
+            top: 15%;
+         }
       }
       &--next {
          bottom: 16%;
          background: url("../img/icons/btn-next.svg") center no-repeat;
+         @media (max-width: toEm($mobile)) {
+            bottom: 25%;
+         }
+         @media (max-width: toEm(600)) {
+            bottom: 35%;
+         }
       }
    }
    // .hero-swiper__scrollbar
@@ -125,6 +151,21 @@ body {
       top: 35%;
       right: toRem(123);
       background-color: rgba(255, 255, 255, 0.3);
+      @media (max-width: toEm($pc)) {
+         right: toRem(73);
+      }
+      @media (max-width: toEm($tablet)) {
+         right: toRem(43);
+      }
+      @media (max-width: toEm($mobile)) {
+         height: 30%;
+      }
+      @media (max-width: toEm(600)) {
+         top: 25%;
+      }
+      @media (max-width: toEm($mobileSmall)) {
+         right: toRem(37);
+      }
    }
    .swiper-scrollbar-drag {
       height: 50%;
@@ -136,10 +177,30 @@ body {
    padding-top: toRem(323);
    padding-bottom: toRem(328);
    position: relative;
+   @media (max-width: toEm($tablet)) {
+      padding-top: toRem(250);
+      padding-bottom: toRem(250);
+   }
+   @media (max-width: toEm(600)) {
+      padding-top: toRem(180);
+   }
+   @media (max-width: toEm($mobileSmall)) {
+      padding-top: toRem(150);
+      padding-bottom: toRem(150);
+   }
+   @media (max-width: toEm(375)) {
+      padding-top: toRem(100);
+   }
    // .slide-hero__container
    &__container {
       position: relative;
       z-index: 2;
+      @media (max-width: toEm($mobile)) {
+         padding-right: toRem(100);
+      }
+      @media (max-width: toEm($mobileSmall)) {
+         padding-right: toRem(65);
+      }
    }
    // .slide-hero__body
    &__body {
@@ -152,6 +213,9 @@ body {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      .slide-hero--image-right & {
+         object-position: 70%;
+      }
    }
 }
 
@@ -213,5 +277,48 @@ body {
    // .advantages__content
    &__content {
       flex: 0 1 50%;
+   }
+}
+
+// =============================================================================================================
+
+.why {
+   // .why__container
+   &__container {
+      max-width: toRem(1280);
+   }
+   // .why__header
+   &__header {
+      &:not(:last-child) {
+         margin-bottom: toRem(55);
+      }
+   }
+   // .why__items
+   &__items {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: toRem(15);
+      justify-items: center;
+      text-align: center;
+   }
+   // .why__item
+   &__item {
+   }
+   // .why__image
+   &__image {
+      width: toRem(112);
+      height: toRem(113);
+      object-fit: contain;
+      &:not(:last-child) {
+         margin-bottom: toRem(50);
+      }
+   }
+   // .why__title-item
+   &__title-item {
+      font-family: "Philosopher", sans-serif;
+      font-size: toRem(30);
+      font-weight: 700;
+      color: $titleColor;
+      text-transform: capitalize;
    }
 }

@@ -128,6 +128,11 @@ body.menu-open {
 .section-header__sub-title:not(:last-child) {
   margin-bottom: 1.6875rem;
 }
+@media (max-width: 47.99875em) {
+  .section-header__sub-title:not(:last-child) {
+    margin-bottom: 1.25rem;
+  }
+}
 .section-header__title {
   font-family: "Philosopher", sans-serif;
   font-size: 3.125rem;
@@ -138,14 +143,71 @@ body.menu-open {
 .section-header__title:not(:last-child) {
   margin-bottom: 2.25rem;
 }
+@media (max-width: 47.99875em) {
+  .section-header__title:not(:last-child) {
+    margin-bottom: 1.5625rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .section-header__title:not(:last-child) {
+    margin-bottom: 0.9375rem;
+  }
+}
+.why .section-header__title:not(:last-child) {
+  margin-bottom: 1.875rem;
+}
 .hero-swiper .section-header__title {
   font-size: 5rem;
+}
+@media (max-width: 61.99875em) {
+  .hero-swiper .section-header__title {
+    font-size: 3.75rem;
+  }
+}
+@media (max-width: 47.99875em) {
+  .hero-swiper .section-header__title {
+    font-size: 3.125rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .hero-swiper .section-header__title {
+    font-size: 2.625rem;
+  }
+}
+@media (max-width: 29.99875em) {
+  .hero-swiper .section-header__title {
+    font-size: 2.375rem;
+  }
 }
 .section-header__text {
   line-height: 150%;
 }
+@media (max-width: 37.5em) {
+  .section-header__text {
+    font-size: 1.125rem;
+  }
+}
+@media (max-width: 29.99875em) {
+  .section-header__text {
+    line-height: 120%;
+  }
+}
 .section-header__text:not(:last-child) {
   margin-bottom: 3.125rem;
+}
+@media (max-width: 47.99875em) {
+  .section-header__text:not(:last-child) {
+    margin-bottom: 2.1875rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .section-header__text:not(:last-child) {
+    margin-bottom: 1.5625rem;
+  }
+}
+.why .section-header__text {
+  max-width: 56.25rem;
+  margin: 0 auto;
 }
 .section-header__text--narrow {
   max-width: 41.25rem;
@@ -173,6 +235,9 @@ body.menu-open {
   .button {
     min-width: auto;
     padding: 0.8125rem 1.25rem;
+  }
+  .hero-swiper .button {
+    min-width: 11.875rem;
   }
 }
 
@@ -472,8 +537,16 @@ body.menu-open {
   margin-bottom: -0.0625rem;
 }
 
+.page__hero-swiper {
+  margin-bottom: 3.125rem;
+}
 .page__advantages {
-  padding-top: 5.9375rem;
+  padding-top: 3.125rem;
+  padding-bottom: 3.125rem;
+}
+.page__why {
+  padding-top: 3.125rem;
+  padding-bottom: 3.125rem;
 }
 
 .hero-swiper {
@@ -499,6 +572,22 @@ body.menu-open {
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
 }
+@media (max-width: 74.99875em) {
+  .hero-swiper__arrow {
+    right: 3.125rem;
+  }
+}
+@media (max-width: 61.99875em) {
+  .hero-swiper__arrow {
+    right: 1.25rem;
+  }
+}
+@media (max-width: 29.99875em) {
+  .hero-swiper__arrow {
+    width: 2.1875rem;
+    height: 2.1875rem;
+  }
+}
 @media (any-hover: hover) {
   .hero-swiper__arrow:hover {
     background-color: #7d806a;
@@ -513,9 +602,24 @@ body.menu-open {
   top: 25%;
   background: url("../img/icons/btn-prev.svg") center no-repeat;
 }
+@media (max-width: 37.5em) {
+  .hero-swiper__arrow--prev {
+    top: 15%;
+  }
+}
 .hero-swiper__arrow--next {
   bottom: 16%;
   background: url("../img/icons/btn-next.svg") center no-repeat;
+}
+@media (max-width: 47.99875em) {
+  .hero-swiper__arrow--next {
+    bottom: 25%;
+  }
+}
+@media (max-width: 37.5em) {
+  .hero-swiper__arrow--next {
+    bottom: 35%;
+  }
 }
 .hero-swiper .swiper-scrollbar.swiper-scrollbar-vertical,
 .hero-swiper .swiper-vertical > .swiper-scrollbar {
@@ -524,6 +628,36 @@ body.menu-open {
   top: 35%;
   right: 7.6875rem;
   background-color: rgba(255, 255, 255, 0.3);
+}
+@media (max-width: 74.99875em) {
+  .hero-swiper .swiper-scrollbar.swiper-scrollbar-vertical,
+  .hero-swiper .swiper-vertical > .swiper-scrollbar {
+    right: 4.5625rem;
+  }
+}
+@media (max-width: 61.99875em) {
+  .hero-swiper .swiper-scrollbar.swiper-scrollbar-vertical,
+  .hero-swiper .swiper-vertical > .swiper-scrollbar {
+    right: 2.6875rem;
+  }
+}
+@media (max-width: 47.99875em) {
+  .hero-swiper .swiper-scrollbar.swiper-scrollbar-vertical,
+  .hero-swiper .swiper-vertical > .swiper-scrollbar {
+    height: 30%;
+  }
+}
+@media (max-width: 37.5em) {
+  .hero-swiper .swiper-scrollbar.swiper-scrollbar-vertical,
+  .hero-swiper .swiper-vertical > .swiper-scrollbar {
+    top: 25%;
+  }
+}
+@media (max-width: 29.99875em) {
+  .hero-swiper .swiper-scrollbar.swiper-scrollbar-vertical,
+  .hero-swiper .swiper-vertical > .swiper-scrollbar {
+    right: 2.3125rem;
+  }
 }
 .hero-swiper .swiper-scrollbar-drag {
   height: 50%;
@@ -535,9 +669,41 @@ body.menu-open {
   padding-bottom: 20.5rem;
   position: relative;
 }
+@media (max-width: 61.99875em) {
+  .slide-hero {
+    padding-top: 15.625rem;
+    padding-bottom: 15.625rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .slide-hero {
+    padding-top: 11.25rem;
+  }
+}
+@media (max-width: 29.99875em) {
+  .slide-hero {
+    padding-top: 9.375rem;
+    padding-bottom: 9.375rem;
+  }
+}
+@media (max-width: 23.4375em) {
+  .slide-hero {
+    padding-top: 6.25rem;
+  }
+}
 .slide-hero__container {
   position: relative;
   z-index: 2;
+}
+@media (max-width: 47.99875em) {
+  .slide-hero__container {
+    padding-right: 6.25rem;
+  }
+}
+@media (max-width: 29.99875em) {
+  .slide-hero__container {
+    padding-right: 4.0625rem;
+  }
 }
 .slide-hero__image {
   position: absolute;
@@ -547,6 +713,10 @@ body.menu-open {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.slide-hero--image-right .slide-hero__image {
+  -o-object-position: 70%;
+     object-position: 70%;
 }
 
 .advantages__container {
@@ -614,4 +784,34 @@ body.menu-open {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 50%;
           flex: 0 1 50%;
+}
+
+.why__container {
+  max-width: 80rem;
+}
+.why__header:not(:last-child) {
+  margin-bottom: 3.4375rem;
+}
+.why__items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.9375rem;
+  justify-items: center;
+  text-align: center;
+}
+.why__image {
+  width: 7rem;
+  height: 7.0625rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.why__image:not(:last-child) {
+  margin-bottom: 3.125rem;
+}
+.why__title-item {
+  font-family: "Philosopher", sans-serif;
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #7d806a;
+  text-transform: capitalize;
 }
