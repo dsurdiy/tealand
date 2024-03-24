@@ -22,6 +22,15 @@
       font-weight: 700;
       color: $titleColor;
       text-transform: capitalize;
+      @media (max-width: toEm($tablet)) {
+         font-size: toRem(42);
+      }
+      @media (max-width: toEm(600)) {
+         font-size: toRem(36);
+      }
+      @media (max-width: toEm($mobileSmall)) {
+         font-size: toRem(32);
+      }
       &:not(:last-child) {
          margin-bottom: toRem(36);
          @media (max-width: toEm($mobile)) {
@@ -103,7 +112,8 @@
    @media (max-width: toEm($tablet)) {
       min-width: auto;
       padding: toRem(13) toRem(20);
-      .hero-swiper & {
+      .hero-swiper &,
+      .advantages & {
          min-width: toRem(190);
       }
    }
